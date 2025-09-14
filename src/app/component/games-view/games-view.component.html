@@ -1,0 +1,154 @@
+<div class="section-padding games-view-page d-flex flex-column gap-60px">
+  <section class="container section-one gap-60px">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-12">
+        <img src="{{data.sectionOne.banner}}" alt="" title="" class="img-fluid" width="" height="">
+      </div>
+      <div class="col-lg-5 col-12">
+        <h1 class="title fs-32px lh-46px">{{ data.sectionOne.title }}</h1>
+        <p class="mb-0 text-justify lh-24px text-600">@for (item of data.sectionOne.description; track $index) {
+          {{ item }}
+        }</p>
+        <div class="d-flex flex-lg-row flex-column align-items-center gap-15px pb-lg-60px mt-15px">
+          <button class="btn btn-primary d-flex flex-row align-items-center gap-10px" (click)="scrollToContact()">
+            <i class="icon icon-flag fs-24px text-white"></i>
+            <span class="fw-light"> {{ data.sectionOne.createCampingLink }}</span>
+          </button>
+          <button class="btn btn-outline-primary d-flex flex-row align-items-center gap-10px"
+                  (click)="scrollToContact()">
+            <i class="icon fs-21px icon-call-calling"></i>
+            <span class="">{{ data.sectionOne.RequestAdvice }}</span>
+          </button>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-15px">
+          <div class="coming-soon mt-60px">
+            <img src="assets/images/coming.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container section-two">
+    <div class="row flex-lg-row flex-column-reverse gap-30px gap-lg-0 justify-content-center align-items-center">
+      <div class="col-lg-5 col-12">
+        <h2 class="title">{{ data.sectionTwo.title }}</h2>
+        <div class="mb-15px">
+          @for (item of data.sectionTwo.description; track $index) {
+            <div class="d-flex flex-row align-items-baseline mb-5px gap-15px">
+              @if (data.sectionTwo.bulletMark === "marker-number") {
+                <span class="{{ data.sectionTwo.bulletMark }}">{{ $index + 1 }}</span>
+              } @else {
+                <span class="{{ data.sectionTwo.bulletMark }}"></span>
+              }
+              <span class="fw-light fs-16px lh-24px text-600">{{ item }}</span>
+            </div>
+          }
+        </div>
+        @for (item of data.sectionTwo.more; track $index) {
+          <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+            <span class="fw-light fs-16px lh-24px text-600">{{ item }}</span>
+          </div>
+        }
+      </div>
+      <div class="col-lg-5 col-12">
+        <img src="{{data.sectionTwo.banner}}" alt="" title="" class="img-fluid" width="" height="" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container section-three">
+    <div class="row justify-content-center align-items-center gap-30px gap-lg-0">
+      <div class="col-lg-5 col-12">
+        @if (data.sectionThree.banner) {
+          <img src="assets/images/3layer01.jpg" alt="" class="img-fluid">
+        } @else {
+          <h2 class="title">{{ data.sectionThree.title }}</h2>
+          <div>
+            <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+              <span class="{{data.sectionThree.bulletMark}}"></span>
+              <span class="fw-light fs-16px lh-24px text-600">
+                {{ data.sectionThree.description[0] }}
+              </span>
+            </div>
+            <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+              <span class="{{data.sectionThree.bulletMark}}"></span>
+              <span class="fw-light fs-16px lh-24px text-600">{{ data.sectionThree.description[1] }}</span>
+            </div>
+            <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+              <span class="{{data.sectionThree.bulletMark}}"></span>
+              <span class="fw-light fs-16px lh-24px text-600">{{ data.sectionThree.description[2] }}</span>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="col-lg-5 col-12">
+        <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+          @if (data.sectionThree.banner) {
+            <h2 class="title">{{ data.sectionThree.title }}</h2>
+          } @else {
+            <span class="{{data.sectionThree.bulletMark}}"></span>
+            <span class="fw-light fs-16px lh-24px text-600">{{ data.sectionThree.description[3] }}</span>
+          }
+        </div>
+        @if (!data.sectionThree.banner) {
+          <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+            <span class="{{data.sectionThree.bulletMark}}"></span>
+            <span class="fw-light fs-16px lh-24px text-600">
+                {{ data.sectionThree.description[4] }}
+              </span>
+          </div>
+        } @else {
+          @for (item of data.sectionThree.description; track $index) {
+            <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+              <span class="{{data.sectionThree.bulletMark}}"></span>
+              <span class="fw-light fs-16px lh-24px text-600">{{ item }}</span>
+            </div>
+          }
+        }
+        <div class="row pt-15px">
+          <span class="fw-light fs-16px lh-24px text-600">{{ data.sectionThree.more }}</span>
+        </div>
+      </div>
+    </div>
+    @if (!data.sectionThree.banner) {
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-10 col-12 px-lg-2 pt-lg-15px">
+          <p>
+             <span class="fw-light fs-16px lh-24px text-600">{{ data.sectionThree.description[5] }}</span>
+          </p>
+        </div>
+      </div>
+    }
+  </section>
+  <section class="container section-four mb-60px position-relative">
+    <div part="button-prev" class="swiper-button-prev position-absolute" tabindex="0" role="button"
+         aria-label="Previous slide" aria-controls="swiper-wrapper-410ea5d342bb494ed">
+      <i class="icon icon-arrow-left text-primary fs-32px"></i>
+    </div>
+    <div part="button-next" class="swiper-button-next position-absolute" tabindex="0" role="button"
+         aria-label="Next slide" aria-controls="swiper-wrapper-58e669bb53bb314a">
+      <i class="icon icon-arrow-right text-primary fs-32px"></i>
+    </div>
+    <app-custom-swiper
+      [config]="SwiperConfig"
+      [startIndex]="1"
+      [slides]="slider.data"
+      #swiperRef>
+      <ng-template #swiperSlideTemplate let-index="index">
+        <app-campaign-item
+          [src]="slider.item(index)?.image"
+          [alt]="slider.item(index)?.imageAlt"
+          [title]="slider.item(index)?.title"
+          [description]="slider.item(index)?.description"
+          [brand]="slider.item(index)?.brand"
+          [link]="slider.item(index)?.link"
+          [textBrand]="slider.item(index).textBrand"
+          [viewBtnText]="slider.item(index).viewBtnText"
+          [icon]="slider.item(index).icon"
+          [btn]="slider.item(index).btn"
+        ></app-campaign-item>
+      </ng-template>
+    </app-custom-swiper>
+  </section>
+</div>

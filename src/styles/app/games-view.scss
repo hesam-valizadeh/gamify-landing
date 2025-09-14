@@ -1,0 +1,52 @@
+.games-view-page{
+  .paregrapgh:last-child {
+    margin-bottom: 15px !important;
+  }
+  .game-preview-box {
+    width: 347px;
+    height: 121px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #E9ECEF;
+    padding-right: 30px;
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+  }
+
+  swiper-slide.swiper-slide {
+    width: 480px !important;
+    max-width: 480px !important;
+    cursor: pointer !important;
+
+  }
+   .swiper-slide{
+    box-shadow:$box-shadow;
+     cursor: pointer !important;
+
+
+  }
+  .coming-soon{
+    width: 100%;
+    height: 120px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev{
+    &:after{
+      display: none;
+    }
+    svg{
+      display: none;
+    }
+  }
+
+}
+.section-four{
+    div[part='button-prev']{
+      left:120px
+    }
+  div[part='button-next']{
+    right:120px
+  }
+}

@@ -1,0 +1,96 @@
+<div class="container">
+  <header
+    class="mt-15px mb-lg-90px mb-30px pe-15px ps-15px py-lg-15px py-7px d-flex align-items-center justify-content-start">
+    <a href="/">
+      <img src="assets/images/logo.svg" alt="logo" title="logo" width="155" height="40" class="object-fit-contain">
+    </a>
+    <menu class="p-0 ps-30px my-0 column-gap-15px d-lg-flex d-none">
+      <a routerLink="/" class="">{{ data.home }}</a>
+      <a href="" class="games">
+        <span>{{ data.games }}</span>
+        <i class="icon icon-add"></i>
+        <div class="submenu">
+          <div class="d-flex align-items-center gap-15px">
+            <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette" class="item-menu"
+               (click)="closeDesktopSubmenu()">
+              <img src="assets/images/geme-05.svg" [alt]="data.singleRoulette">
+              <span>{{ data.singleRoulette }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.tripleRoulette" class="item-menu"
+               (click)="closeDesktopSubmenu()">
+              <img src="assets/images/geme-04.svg" [alt]="data.tripleRoulette">
+              <span>{{ data.tripleRoulette }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.jackpot" class="item-menu"
+               (click)="closeDesktopSubmenu()">
+              <img src="assets/images/game-03.svg" [alt]="data.jackpot">
+              <span>{{ data.jackpot }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.quiz" class="item-menu"
+               (click)="closeDesktopSubmenu()">
+              <img src="assets/images/game-02.svg" [alt]="data.quiz">
+              <span>{{ data.quiz }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.paperScissorsRock" class="item-menu"
+               (click)="closeDesktopSubmenu()">
+              <img src="assets/images/game-01.svg" [alt]="data.paperScissorsRock">
+              <span>{{ data.paperScissorsRock }}</span>
+            </a>
+          </div>
+        </div>
+      </a>
+      <a href="#about" class="" (click)="scrollToAbout()">{{ data.about }}</a>
+    </menu>
+    <div class="me-auto contact-btn-box d-flex align-items-center gap-15px">
+      <i class="icon icon-menu text-primary d-lg-none d-block" id="hamburger-menu" (click)="toggleSubmenu()"></i>
+      <button class="btn btn-primary btn-icon" (click)="scrollToContact()">
+        <i class="icon icon-call-calling"></i>
+        <span class="text-btn">{{ data.contact }}</span>
+      </button>
+    </div>
+  </header>
+  @if (isSubmenuOpen()) {
+    <div class="mobile-submenu">
+      <div class="d-flex flex-column align-items-start">
+        <a routerLink="/" class="mobile-menu-item fw-light fs-16px text-800 home-link-first-child">{{ data.home }}</a>
+        <a
+          class="mobile-menu-item d-flex justify-content-between align-items-center fw-light fs-16px text-800 my-15px"
+          (click)="toggleSubmenuGames()">
+          <span>{{ data.games }}</span>
+          <i class="icon icon-add text-primary fs-24px"></i>
+        </a>
+        @if (isSubmenuGamesOpen()) {
+          <div class="w-100 mb-10px submenu-games">
+            <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+               class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+              <img src="assets/images/game-05.svg" [alt]="data.singleRoulette" width="42" height="50">
+              <span class="fw-light fs-sm text-800">{{ data.singleRoulette }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.tripleRoulette"
+               class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+              <img src="assets/images/game-04.svg" [alt]="data.tripleRoulette" width="42" height="50">
+              <span class="fw-light fs-sm text-800">{{ data.tripleRoulette }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.jackpot"
+               class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+              <img src="assets/images/game-03.svg" [alt]="data.jackpot" width="42" height="50">
+              <span class="fw-light fs-sm text-800">{{ data.jackpot }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.quiz"
+               class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+              <img src="assets/images/game-02.svg" [alt]="data.quiz" width="42" height="50">
+              <span class="fw-light fs-sm text-800">{{ data.quiz }}</span>
+            </a>
+            <a [routerLink]="RouterLinksPath.gamesPage.paperScissorsRock"
+               class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+              <img src="assets/images/game-01.svg" [alt]="data.paperScissorsRock" width="42" height="50">
+              <span class="fw-light fs-sm text-800"> {{ data.paperScissorsRock }}</span>
+            </a>
+          </div>
+        }
+        <a href="#about" class="mobile-menu-item fw-light fs-16px text-800 border-top-link"
+           (click)="scrollToAbout()">{{ data.about }}</a>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,15 @@
+
+.link{
+  width: 126px;
+}
+.image-box{
+  min-width: 190px;
+  height: 270px;
+  object-fit: contain;
+  border-radius: 15px !important;
+  img{
+    min-width: 190px;
+    height: 267px;
+    border-radius: 15px !important;
+  }
+}

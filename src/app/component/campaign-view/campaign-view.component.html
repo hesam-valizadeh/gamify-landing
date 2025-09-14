@@ -1,0 +1,107 @@
+<div class="section-padding  d-flex flex-column gap-60px campaign-page">
+  <section class="container section-one gap-60px">
+    <div class="row justify-content-between section-padding">
+      <div class="col-lg-6 col-12 overflow-hidden p-0 p-lg-1">
+        <div class="d-flex flex-lg-column flex-column-reverse gap-15px h-100 justify-content-between">
+            <div class="d-flex flex-column gap-15px information-campaign-page">
+              <h1 class="title mb-0 fs-32px lh-48px">{{ data.sectionOne.title }}</h1>
+                <img src="{{data.sectionOne.logo}}" alt="" title="" width="{{data.sectionOne.widthLogo}}" height="{{data.sectionOne.heightLogo}}" >
+              <div class="d-flex flex-lg-row flex-column align-items-center gap-15px mb-auto" >
+                <button class="btn btn-primary d-flex flex-row align-items-center gap-10px" (click)="scrollToContact()">
+                  <i class="icon icon-flag fs-24px text-white"></i>
+                  <span class="fw-light"> {{ data.sectionOne.createCampingLink }}</span>
+                </button>
+                <button class="btn btn-outline-primary d-flex flex-row align-items-center gap-10px" (click)="scrollToContact()">
+                  <i class="icon fs-21px icon-call-calling"></i>
+                  <span class="">{{data.sectionOne.RequestAdvice}}</span>
+                </button>
+              </div>
+            </div>
+            <div class="sliders position-relative">
+              <div part="button-prev" class="swiper-button-prev position-absolute" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-410ea5d342bb494ed">
+                <i class="icon icon-arrow-left text-primary fs-32px"></i>
+              </div>
+              <div part="button-next" class="swiper-button-next position-absolute" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-58e669bb53bb314a">
+                <i class="icon icon-arrow-right text-primary fs-32px"></i>
+              </div>
+              <app-custom-swiper
+                [config]="SwiperConfig"
+                [startIndex]="1"
+                [slides]="data.sliders"
+                #swiperRef>
+                <ng-template #swiperSlideTemplate let-index="index">
+                  <img [src]="data.sliders[index]?.image"
+                       [alt]="''"
+                       class="campaign-image"
+                       [class.campaign-image-active]="index === activeIndex"
+                       (click)="setActiveIndex(index)">
+                </ng-template>
+              </app-custom-swiper>
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+          <img src="{{activeImage}}" alt="" width="520" height="720" class="preview-sider object-fit-cover rounded-25">
+      </div>
+    </div>
+  </section>
+  <section class="container section-two">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-12">
+        <h2 class="title">
+          {{ data.sectionTwo.targetTitle }}
+        </h2>
+        <p class="fs-16px fw-light lh-24px text-600 text-justify mb-15px">{{ data.sectionTwo.targetMore }}</p>
+        <div class="mb-15px">
+          @for (item of data.sectionTwo.targetDescriptions; track $index) {
+            <div class="d-flex flex-row align-items-lg-center align-items-baseline mb-5px gap-15px">
+              @if (data.sectionTwo.bulletMarkWithoutNumber.flag) {
+                <span class="{{ data.sectionTwo.bulletMarkWithoutNumber.class}}"></span>
+                <span class="fw-light fs-16px lh-24px text-600">{{ item }}</span>
+              }
+            </div>
+          }
+        </div>
+      </div>
+      <div class="col-lg-5 col-12">
+        <h2 class="title">{{ data.sectionTwo.advantageTitle }}</h2>
+        @if(data.sectionTwo.advantageMore){
+        <p class="mb-15px">{{ data.sectionTwo.advantageMore?.[0] }}</p>
+        }
+        <div class="mb-15px">
+          @for (item of data.sectionTwo.advantageDescriptions; track $index) {
+            <div class="d-flex flex-row align-items-center gap-15px">
+              <div class="d-flex flex-row  align-items-baseline mb-5px gap-15px">
+                @if (data.sectionTwo.bulletMarkWithNumber.flag) {
+                  <span class="{{ data.sectionTwo.bulletMarkWithNumber.class }}">{{ $index + 1 }}</span>
+                }
+                <span class="fw-light fs-16px lh-24px text-600">{{ item }}</span>
+              </div>
+            </div>
+          }
+        </div>
+        <p>{{ data.sectionTwo.advantageMore?.[1] }}</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container section-three  mb-60px">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-12">
+        <h2 class="title">{{ data.sectionThree.title }}</h2>
+        <div class="mb-15px">
+          @for (item of data.sectionThree.description; track $index) {
+            <div class="d-flex flex-row align-items-center mb-5px gap-15px">
+              @if (data.sectionThree.bulletMarkWithoutNumber.flag) {
+                <span class="{{ data.sectionThree.bulletMarkWithoutNumber.class}}"></span>
+                <span class="fw-light fs-16px lh-24px text-600">{{ item }}</span>
+              }
+            </div>
+          }
+        </div>
+      </div>
+      <div class="col-lg-5 col-12"></div>
+    </div>
+  </section>
+</div>

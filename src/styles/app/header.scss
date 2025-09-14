@@ -1,0 +1,62 @@
+header {
+  background-color:$gray-200;
+  border-radius: 50px;
+  a {
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    line-height: 32px;
+  }
+  .icon.icon-add {
+    position: relative;
+    top: 4px;
+    color: $primary;
+    margin-right: 5px;
+  }
+}
+.submenu{
+  box-shadow: $box-shadow;
+}
+#hamburger-menu {
+  width: 24px;
+  height: 24px;
+  font-size: $font-size-xxl;
+  display: block;
+}
+
+.mobile-submenu {
+  z-index: 1111;
+  background-color: $white;
+  width: 260px;
+  height: auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow:$box-shadow;
+  position: absolute;
+  top: 78px;
+  left: 15px;
+
+  .mobile-menu-item {
+    font-size: $font-size-base;
+    font-weight: 300;
+    text-decoration: none;
+    color: $black;
+    width: 100%;
+    text-align: right;
+
+    &:hover {
+      color: #6c00cb;
+    }
+  }
+}
+
+
+.border-top-link {
+  border-top: 1px solid $border-color;
+  padding-top: 15px;
+}
+
+.home-link-first-child {
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 15px;
+}

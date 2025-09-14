@@ -1,0 +1,251 @@
+<div class="d-flex flex-column row-gap-90px">
+  <section class="container banner-section">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-12">
+        <img [src]="data.sectionOne.image" class="img-fluid" [alt]="data.sectionOne.title" title="" width=""
+             height="">
+      </div>
+      <div class="col-md-5 col-12">
+        <h1 class="title">{{ data.sectionOne.title }}</h1>
+        <p
+          class="IRANYekanX text-dark fs-16px fw-bold pb-15px text-start text-800">{{ data.sectionOne.description }}</p>
+        <div class="d-flex flex-lg-row flex-column btns">
+          <button class="btn btn-primary ms-lg-15px btn-icon" (click)="scrollToContact()">
+            <i class="icon icon-flag"></i>
+            <span>{{ data.sectionOne.createCampingLink }}</span>
+          </button>
+          <button class="btn btn-outline-primary btn-icon" (click)="scrollToContact()">
+            <i class="icon icon-call-calling"> </i>
+            <span>{{ labels.generals.requestForAdvice }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container tools-for-win-section">
+    <div class="row align-items-center justify-content-center">
+
+      <div class="col-lg-5 col-12">
+        <h2 class="title">{{ data.sectionOne.title }}</h2>
+        <p class="fs-16px fw-light">{{ data.sectionTwo.description }}</p>
+      </div>
+
+      <div class="col-lg-5 col-12">
+        <img [src]="data.sectionTwo.image" class="img-fluid" [alt]="data.sectionOne.title" title="" width="520"
+             height="400"
+             loading="lazy">
+      </div>
+    </div>
+  </section>
+  <section class="pb-lg-30px campaigns-section">
+    <div class="container">
+      <h2 class="title text-center">{{ data.sectionThree.title }}</h2>
+      <p class="text-center fw-light fs-16px">{{ data.sectionThree.description }}</p>
+    </div>
+    <app-brand-section></app-brand-section>
+  </section>
+  <section class="container whatsGamifay-section">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-5 col-12" id="about">
+        <img [src]="data.sectionFour.image" class="img-fluid" [alt]="data.sectionFour.title" title="" width="520"
+             height="500"
+             loading="lazy">
+      </div>
+      <div class="col-lg-5 col-12">
+        <h2 class="title">{{ data.sectionFour.title }}</h2>
+        <p class="fw-light fs-16px text-justify">{{ data.sectionFour.description }}</p>
+      </div>
+    </div>
+  </section>
+  <section class="container games-section">
+    <h2 class="title text-center mb-30px">{{ data.sectionFive.title }}</h2>
+    <div class="d-flex flex-row flex-wrap justify-content-center align-items-center gap-30px">
+      @for (card of gamesCard; track card.id; let i = $index) {
+        <app-games
+          [src]="card.image"
+          [alt]="card.imageAlt"
+          [title]="card.title"
+          [Textlink]="card.Textlink"
+          [link]="card.link"
+        ></app-games>
+      } @empty {
+        <div class="col-12">No games available.</div>
+      }
+    </div>
+  </section>
+  <section class="container conditionsRequiring-section">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-5 col-12">
+        <h2 class="title">{{ data.sectionSix.title }}</h2>
+        <div class="">
+          @for (item of data.sectionSix.description; track item; let i = $index) {
+            <div class="fw-light fs-16px mb-15px text-600 d-flex align-items-baseline gap-15px">
+              <span class="marker-without-number"></span>
+              <span>{{ item }}</span>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="col-lg-5 col-12">
+        <img [src]="data.sectionSix.image" class="img-fluid" [alt]="data.sectionSix.title" title="" width="520"
+             height="500"
+             loading="lazy">
+      </div>
+    </div>
+  </section>
+  <section class="container feature-section">
+    <div class="row justify-content-between">
+      <div class="col-lg-6 col-12 pe-lg-30px">
+        <div class="p-lg-60px p-30px rounded shadow">
+          <h2 class="title text-center mb-30px">
+            مزایای گیمی‌فای در یک نگاه
+          </h2>
+          <div class="p-0 d-flex flex-column gap-15px">
+            <div class="fw-light fs-16px  text-600 d-flex flex-row align-items-center gap-15px">
+              <span class="marker-without-number"></span>
+              دارای سرورهای کاملا پایدار و مقیاس‌پذیر
+            </div>
+            <div class="fw-light fs-16px  text-600 d-flex flex-row align-items-center gap-15px">
+              <span class="marker-without-number"></span>
+              اجرای کاملا مطمئن و بدون مشکل
+            </div>
+            <div class="fw-light fs-16px  text-600 d-flex flex-row align-items-center gap-15px">
+              <span class="marker-without-number"></span>
+              قابلیت شخصی‌سازی محتوای کمپین‌ها
+            </div>
+            <div class="fw-light fs-16px  text-600 d-flex flex-row align-items-center gap-15px">
+              <span class="marker-without-number"></span>
+              خروجی‌ها متعدد که بر اساس اهداف شما مشخص می‌شوند.
+            </div>
+            <div class="fw-light fs-16px  text-600 d-flex flex-row align-items-center gap-15px">
+              <span class="marker-without-number"></span>
+              همراهی و پشتیبانی تیم فنی در حین اجرای کمپین برای اطمینان خاطر شما
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12 ps-lg-30px">
+        <div class="col-12 p-lg-60px p-30px rounded shadow">
+          <h2 class="title text-center mb-30px">ویژگی‌های محصول</h2>
+          <div class="p-0 d-flex flex-column gap-15px">
+            <div class="fw-light fs-16px gap-15px">
+             <span
+               class="fw-bold fs-16px pe-15px d-lg-inline-block d-block text-800 d-flex flex-row align-items-center gap-15px">
+                           <span class="marker-without-number d-inline-block ms-lg-15px"> </span>
+                بدون نیاز به توسعه
+             </span>
+              <span class="fw-light fs-16px d-lg-inline-block d-block text-600 me-lg-15px me-25px">نیازی به طراحی از صفر ندارید.</span>
+            </div>
+
+            <div class="fw-light fs-16px gap-15px">
+             <span
+               class="fw-bold fs-16px pe-15px d-lg-inline-block d-block text-800 d-flex flex-row align-items-center gap-15px">
+                           <span class="marker-without-number d-inline-block ms-lg-15px"></span>
+                اتصال به ابزارهای بازاریابی </span>
+              <span
+                class="fw-light fs-16px d-lg-inline-block d-block text-600 me-lg-15px me-25px">قابلیت اتصال به CRM و فرم‌سازها</span>
+            </div>
+            <div class="fw-light fs-16px gap-15px">
+             <span
+               class="fw-bold fs-16px pe-15px d-lg-inline-block d-block text-800 d-flex flex-row align-items-center gap-15px">
+                           <span class="marker-without-number d-inline-block ms-lg-15px"></span>
+                پایداری در ترافیک بالا </span>
+              <span
+                class="fw-light fs-16px d-lg-inline-block d-block text-600 me-lg-15px me-25px">زیرساخت کاملاً مقیاس‌پذیر</span>
+            </div>
+            <div class="fw-light fs-16px gap-15px">
+             <span
+               class="fw-bold fs-16px pe-15px d-lg-inline-block d-block text-800 d-flex flex-row align-items-center gap-15px">
+                           <span class="marker-without-number d-inline-block ms-lg-15px"></span>
+                شخصی‌سازی بالا </span>
+              <span
+                class="fw-light fs-16px d-lg-inline-block d-block text-600 me-lg-15px me-25px">هماهنگ با رنگ، شعار و DNA برند شما</span>
+            </div>
+
+            <div class="fw-light fs-16px gap-15px">
+             <span
+               class="fw-bold fs-16px pe-15px d-lg-inline-block d-block text-800 d-flex flex-row align-items-center gap-15px">
+                           <span class="marker-without-number d-inline-block ms-lg-15px"></span>
+                همراهی تیم فنی </span>
+              <span class="fw-light fs-16px d-lg-inline-block d-block text-600 me-lg-15px me-25px">از شروع تا پایان کمپین در کنار شما هستیم</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container  whyUseTools-section">
+    <h2 class="title text-center mb-30px">{{ data.sectionEight.title }}</h2>
+    <div class="row justify-content-center section-padding">
+      <div class="d-flex justify-content-center flex-wrap px-lg-70px box-pills">
+         <span class="pill">
+          <span class="icon icon-star fw-bold fw-bold text-info"></span>
+          <span class="text-600 fw-light fs-16px lh-24px">{{ data?.sectionEight?.description?.[0] }}</span>
+        </span>
+        <span class="pill">
+           <span class="icon icon-star fw-bold text-success"></span>
+           <span class="text-600 fw-light fs-16px lh-24px">{{ data?.sectionEight?.description?.[1] }}</span>
+        </span>
+        <span class="pill">
+          <span class="icon icon-star fw-bold  text-warning"></span>
+         <span class="text-600 fw-light fs-16px lh-24px">{{ data?.sectionEight?.description?.[2] }} </span>
+        </span>
+        <span class="pill">
+          <span class="icon icon-star fw-bold text-pink"></span>
+          <span class="text-600 fw-light fs-16px lh-24px">{{ data?.sectionEight?.description?.[3] }}</span>
+        </span>
+        <div class="row pt-lg-20px justify-content-center box-pills">
+           <span class="pill">
+                 <span class="icon icon-star fw-bold text-danger"></span>
+                 <span class="text-600 fw-light fs-16px lh-24px">{{ data?.sectionEight?.description?.[4] }}</span>
+           </span>
+          <span class="pill">
+            <span class="icon icon-star fw-bold  text-primary"> </span>
+            <span class="text-600 fw-light fs-16px lh-24px">{{ data?.sectionEight?.description?.[5] }}</span>
+           </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container  favorite-section">
+    <div class="row section-padding justify-content-center align-items-center">
+      <div class="col-lg-6 col-12">
+        <img [src]="data.sectionNine.image" class="img-fluid" alt="" title="" width="520" height="500"
+             loading="lazy">
+      </div>
+      <div class="col-lg-6 col-12">
+        <h2 class="title">{{ data.sectionNine.title }}</h2>
+        <p class="text-justify">{{ data.sectionNine.description }}</p>
+      </div>
+    </div>
+  </section>
+  <section class="container need-section">
+    <div class="row  justify-content-center align-items-center">
+      <div class="col-md-5 col-12">
+        <h2 class="title">{{ data.sectionTen.title }}</h2>
+        <p class="mb-0">{{ data.sectionTen.description }}</p>
+      </div>
+      <div class="col-md-5 col-12">
+        <img [src]="data.sectionTen.image" class="img-fluid" [alt]="data.sectionTen.title" title="" width="520"
+             height="500"
+             loading="lazy">
+      </div>
+    </div>
+
+  </section>
+  <section class="container brands-section pb-90px">
+    <h2 class="title text-center">{{ data.sectionEleven.title }}</h2>
+    <p
+      class="pb-15px text-center">{{ data.sectionEleven.description }}</p>
+    <div class="d-flex justify-content-center align-items-center gap-15px flex-wrap">
+      <img [src]="data?.sectionEleven?.image?.[0]" alt="" title="" loading="lazy" width="220" height="80"
+           class="object-fit-contain">
+      <img [src]="data?.sectionEleven?.image?.[1]" alt="" title="" loading="lazy" width="220" height="80"
+           class="object-fit-contain">
+      <img [src]="data?.sectionEleven?.image?.[2]" alt="" title="" loading="lazy" width="220" height="80"
+           class="object-fit-contain">
+      <img [src]="data?.sectionEleven?.image?.[3]" alt="" title="" loading="lazy" width="220" height="80"
+           class="object-fit-contain">
+    </div>
+  </section>
+</div>

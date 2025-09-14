@@ -1,0 +1,143 @@
+@import "styles/variables";
+@import "styles/utility";
+@import "styles/fonts";
+@import "styles/icons";
+@import "styles/fonts/IRANYekanX";
+@import "styles/fonts/IRANSansX";
+@import "styles/app/app";
+@import "styles/responsive";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.IRANYekanX{
+  font-family: IRANYekanX;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: IRANSansX;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #343A40;
+}
+h1.title{
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.title{
+  margin-bottom: 15px;
+  color:$primary;
+  font-family: IRANYekanX;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+}
+.swiper-slide{
+  box-shadow:0 4px 20px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: $border-radius-lg;
+  -moz-border-radius:  $border-radius-lg;
+  border-radius:  $border-radius-lg;
+  padding: 30px;
+}
+ul li::marker {
+  color: $primary;
+  width: 8px;
+  height: 8px;
+}
+p{
+  color:#6C757D;
+  font-size: 16px;
+  font-weight: 300;
+  white-space: break-spaces;
+  font-family: IRANSansX;
+  white-space: break-spaces;
+  margin-bottom: 0px;
+}
+
+
+span{white-space: normal !important;}
+textarea{resize: none;}
+.btn-icon{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  height: 40px;
+  i.icon{
+    font-size: 24px;
+  }
+}
+
+.marker-number{
+  width: 22px;
+  min-width: 22px;
+  height: 22px;
+  text-align: center;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50em;
+  background: #6C00CB;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+  font-family: IRANYekanX;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+}
+.marker-without-number{
+  display: block;
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: $primary;
+}
+
+.campaign-image {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 13px;
+
+  &-active {
+    border: 1px solid $primary;
+  }
+}
+
+
+.pill {
+  position: relative;
+  width: max-content;
+  padding: 10px 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 1px;
+    background: linear-gradient(90deg, #F2E3FF 0%, #BD71FF 46.15%, #6C00CB 100%);
+    mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+}

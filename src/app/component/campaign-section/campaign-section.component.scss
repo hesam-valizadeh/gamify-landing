@@ -1,0 +1,16 @@
+
+::ng-deep .swiper-slide {
+  width: 480px !important;
+  height: 330px;
+}
+::ng-deep swiper-container{
+  height: auto !important;
+
+}
+
+.swiper-button-next {
+  svg{
+    width: 11px !important;
+    height: 22px !important;
+  }
+}

@@ -1,0 +1,43 @@
+.campaign-page {
+  .campaign-image {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 13px;
+    cursor: pointer;
+    &-active {
+      border: 1px solid #6C00CB;
+    }
+  }
+
+
+  swiper-slide.swiper-slide {
+    border-radius: 0;
+    padding: 0 !important;
+    width: 140px !important;
+    height: fit-content;
+    box-shadow: none;
+
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    &:after {
+      display: none;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+}
+
+

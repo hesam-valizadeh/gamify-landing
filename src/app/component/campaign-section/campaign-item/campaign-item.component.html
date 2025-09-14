@@ -1,0 +1,20 @@
+<div class="d-flex flex-lg-row flex-column item-swiper gap-30px">
+  <div class="image-box">
+    <img [src]="src" [alt]="alt" title="{{ title }}" class="img-fluid rounded border">
+  </div>
+  <div class="d-flex flex-column info-box">
+    @if (btn) {
+      <h3 class="text-primary fs-18px fw-bold IRANYekanX">{{ title }}</h3>
+      <p class="mb-lg-15px d-flex flex-row align-items-center gap-5px">
+        <span class="brand-text fs-xs text-600">{{ textBrand }}</span>
+        <span class="fw-bold text-800 fs-sm">{{ brand }}</span></p>
+      <p class="fs-sm fw-light text-justify description">{{ description }}</p>
+      <div class="d-flex justify-content-end mt-auto">
+        <a [href]="link" class="btn btn-primary text-center btn-icon mt-lg-10px link">
+          <span>{{ viewBtnText }}</span>
+          <i [class]="icon"></i>
+        </a>
+      </div>
+    }
+  </div>
+</div>

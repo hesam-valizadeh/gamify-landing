@@ -1,0 +1,464 @@
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 24px !important;
+    line-height: 31px !important;
+  }
+  .title {
+    font-size: 22px;
+    text-align: center;
+  }
+  h1 {
+    margin-top: 30px;
+  }
+  header {
+    img {
+      width: 96px;
+      height: 20px;
+    }
+  }
+  menu {
+    display: none;
+  }
+
+  #hamburger-menu:hover {
+    display: block !important;
+  }
+  div.contact-btn-box {
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 10px;
+
+      .icon.icon-call-calling {
+        font-size: 22px;
+      }
+
+      .text-btn {
+        display: none;
+      }
+    }
+  }
+  .mobile-submenu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-section {
+    p {
+      font-size: 16px !important;
+      text-align: center !important;
+      font-weight: 700 !important;
+      line-height: 19px !important;
+      color: #343A40 !important;
+    }
+
+    div.btns {
+      justify-content: center;
+      align-items: center;
+
+      button {
+        margin: 5px;
+        width: auto;
+        height: 40px;
+
+        span {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+
+  }
+  .tools-for-win-section {
+    .row {
+      flex-direction: column-reverse;
+    }
+
+    h2 {
+      text-align: right;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  .campaigns-section {
+    a.btn.btn-primary {
+      width: 100% !important;
+      justify-content: center;
+    }
+
+    p {
+      width: 100%;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    swiper-container {
+      height: auto !important;
+    }
+
+    .item-swiper {
+      height: 100%;
+      gap: 15px !important;
+
+      .info-box {
+        height: 100%;
+      }
+    }
+
+    .swiper-slide {
+      height: 560px !important;
+      width: 220px !important;
+      padding: 15px;
+    }
+
+
+
+    h3 {
+      font-family: "IRANYekanX";
+      font-weight: 700 !important;
+      font-size: 17px !important;
+      margin-bottom: 5px;
+
+      + p {
+        margin-bottom: 5px !important;
+
+        span:first-child {
+          color: #6C757D !important;
+          font-size: 12px !important;
+        }
+
+        span:last-child {
+          color: #343A40 !important;
+          font-size: 14px !important;
+        }
+      }
+
+
+    }
+  }
+  .games-section {
+    .title {
+      text-align: center !important;
+      padding: 0 !important;
+    }
+  }
+
+  .whatsGamifay-section {
+    > div {
+      gap: 30px
+    }
+
+    .row {
+      flex-direction: column-reverse;
+
+      h2 {
+        font-family: IRANYekanX;
+        font-size: 28px;
+        text-align: right !important;
+      }
+
+      p {
+        color: #6C757D !important;
+        margin-bottom: 0 !important;
+        text-align: justify;
+      }
+    }
+  }
+
+  .conditionsRequiring-section {
+    h2.title {
+      text-align: right !important;
+    }
+
+    .row {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+  }
+
+  .feature-section {
+    .row {
+      flex-direction: column-reverse;
+      gap: 20px;
+      justify-content: center !important;
+      align-items: center;
+
+      ul {
+        li {
+          span:last-child {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .whyUseTools-section {
+    .box-pills {
+      gap: 20px !important;
+    }
+
+    .pill {
+      width: max-content !important;
+      height: 44px;
+
+      span:nth-child(2) {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+  .need-section {
+    .row {
+      flex-direction: column-reverse;
+
+    }
+  }
+
+  .brands-section {
+    p {
+      text-align: center !important;
+    }
+
+    img {
+      width: 150px !important;
+      height: 55px !important;
+      object-fit: contain !important;
+    }
+  }
+  .favorite-section {
+    h2 {
+      text-align: right !important;
+    }
+  }
+
+  // Footer
+
+  footer {
+    div {
+      div.row {
+        gap: 30px !important;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 20px !important;
+      line-height: 13px;
+
+    }
+
+    p {
+      text-align: center;
+      line-height: 22px;
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .copyright-footer {
+    font-size: 12px !important;
+    margin-top: 10px;
+  }
+  .games-view-page {
+    .swiper-wrapper {
+      padding-top: 30px;
+      padding-bottom: 20px
+    }
+
+    .section-one {
+      .title {
+        text-align: center !important;
+        font-size: 28px !important;
+        font-weight: 700 !important;
+        line-height: 36px !important;
+      }
+
+      p {
+        text-align: center !important;
+      }
+    }
+
+    .section-two {
+      .title {
+        text-align: right;
+      }
+    }
+
+    .start-game-link {
+      width: 139px;
+      height: 40px;
+      bottom: 56px;
+      left: 123px;
+    }
+
+    .section-one {
+      .game-preview-box {
+        margin-top: 60px !important;
+      }
+    }
+
+
+    .section-four {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none !important;
+      }
+
+      .item-swiper {
+        gap: 15px !important;
+        height: 100%;
+
+        .info-box {
+          height: 100%;
+        }
+      }
+
+      .swiper-slide {
+        width: 220px !important;
+        padding: 15px !important;
+        height: 550px !important;
+      }
+
+      h3 {
+        font-size: 17.1px !important;
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin-bottom: 5px;
+
+      }
+
+      .image-box {
+        img {
+          min-width: auto;
+          height: auto;
+          object-fit: contain;
+        }
+
+      }
+
+      .description {
+        font-size: 12px !important;
+        margin-bottom: 15px;
+      }
+
+      a {
+        width: 100%;
+        text-align: center !important;
+        justify-content: center;
+      }
+    }
+  }
+  .campaign-page {
+    .section-one {
+      .row {
+        flex-direction: column-reverse;
+
+        .overflow-hidden {
+          > div.gap-15px {
+            gap: 60px !important;
+          }
+        }
+      }
+    }
+
+    .information-campaign-page {
+      text-align: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 18px;
+        margin-top: 0 !important;
+      }
+    }
+
+    h2 {
+      text-align: right !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+
+    .section-two {
+      div.row {
+        align-items: baseline;
+      }
+    }
+
+    .preview-sider {
+      width: 345px;
+      height: 484px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+  }
+
+
+}
+
+@include media-breakpoint-up(lg) {
+  .section-padding {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+  .section-four {
+    width: 1070px;
+  }
+  menu {
+    position: relative;
+
+    .submenu {
+      position: absolute;
+      top: 30px;
+      width: 620px;
+      height: 197px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      display: none;
+      z-index: 1111;
+      .item-menu {
+        width: 100px;
+        height: 137px;
+        img {
+          width: 85px;
+          height: 100px;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 11px;
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .games:hover .submenu {
+      display: block;
+    }
+
+    .games.no-hover:hover .submenu {
+      display: none;
+    }
+  }
+
+  .games:hover .submenu {
+    display: block;
+  }
+
+  .games:not(:hover) .submenu {
+    display: none;
+  }
+}
+

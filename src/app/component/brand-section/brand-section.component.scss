@@ -1,0 +1,14 @@
+::ng-deep swiper-container{
+  height: auto !important;
+  margin-left: 15px;
+  .swiper-slide{
+    width: 520px !important;
+    height: 330px !important;
+    &:last-child{
+      margin-left: 8px;
+    }
+    &:first-child{
+      margin-right: 8px;
+    }
+  }
+}
