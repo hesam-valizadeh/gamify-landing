@@ -1,8 +1,9 @@
 import {Component, Input} from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-games',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './games.component.html',
   styleUrl: './games.component.scss'
 })

@@ -1,7 +1,8 @@
 import {Component, Input} from '@angular/core';
+import { RouterLinkWithHref } from "@angular/router";
 @Component({
   selector: 'app-campaign-item',
-  imports: [],
+  imports: [RouterLinkWithHref],
   templateUrl: './campaign-item.component.html',
   styleUrl: './campaign-item.component.scss'
 })
